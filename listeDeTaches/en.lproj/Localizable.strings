@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  listeDeTaches
+
+  Created by Philippe MICHEL on 10/07/2021.
+  
+*/
+"title" = "List of my tasks";
+"textField" = "Add a task";
+"section" = "My task to do";

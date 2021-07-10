@@ -7,19 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3731684E26904EFB00C70C78 /* Tache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3731684D26904EFB00C70C78 /* Tache.swift */; };
+		37316850269051D700C70C78 /* VueTacheListeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3731684F269051D700C70C78 /* VueTacheListeModel.swift */; };
+		3731685226905B8000C70C78 /* ListeTacheUserDefaultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3731685126905B8000C70C78 /* ListeTacheUserDefaultModel.swift */; };
 		373BE17F268A64AE006EBF2F /* listeDeTachesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373BE17E268A64AE006EBF2F /* listeDeTachesApp.swift */; };
 		373BE181268A64AE006EBF2F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373BE180268A64AE006EBF2F /* ContentView.swift */; };
 		373BE183268A64AF006EBF2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 373BE182268A64AF006EBF2F /* Assets.xcassets */; };
 		373BE186268A64AF006EBF2F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 373BE185268A64AF006EBF2F /* Preview Assets.xcassets */; };
+		37E78879269A33B900FD2F26 /* Ressources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E78878269A33B900FD2F26 /* Ressources.swift */; };
+		37E7887C269A3B8400FD2F26 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 37E7887E269A3B8400FD2F26 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3731684D26904EFB00C70C78 /* Tache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tache.swift; sourceTree = "<group>"; };
+		3731684F269051D700C70C78 /* VueTacheListeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VueTacheListeModel.swift; sourceTree = "<group>"; };
+		3731685126905B8000C70C78 /* ListeTacheUserDefaultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListeTacheUserDefaultModel.swift; sourceTree = "<group>"; };
 		373BE17B268A64AE006EBF2F /* listeDeTaches.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = listeDeTaches.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		373BE17E268A64AE006EBF2F /* listeDeTachesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = listeDeTachesApp.swift; sourceTree = "<group>"; };
 		373BE180268A64AE006EBF2F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		373BE182268A64AF006EBF2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		373BE185268A64AF006EBF2F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		373BE187268A64AF006EBF2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37E78878269A33B900FD2F26 /* Ressources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ressources.swift; sourceTree = "<group>"; };
+		37E7887D269A3B8400FD2F26 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		37E7887F269A3B9200FD2F26 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,10 +63,14 @@
 		373BE17D268A64AE006EBF2F /* listeDeTaches */ = {
 			isa = PBXGroup;
 			children = (
+				37E78877269A337600FD2F26 /* Ressources */,
+				373BE190268A658B006EBF2F /* ViewModel */,
+				373BE18F268A6574006EBF2F /* View */,
+				373BE18E268A6560006EBF2F /* Model */,
 				373BE17E268A64AE006EBF2F /* listeDeTachesApp.swift */,
-				373BE180268A64AE006EBF2F /* ContentView.swift */,
 				373BE182268A64AF006EBF2F /* Assets.xcassets */,
 				373BE187268A64AF006EBF2F /* Info.plist */,
+				37E7887E269A3B8400FD2F26 /* Localizable.strings */,
 				373BE184268A64AF006EBF2F /* Preview Content */,
 			);
 			path = listeDeTaches;
@@ -67,6 +82,39 @@
 				373BE185268A64AF006EBF2F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		373BE18E268A6560006EBF2F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3731684D26904EFB00C70C78 /* Tache.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		373BE18F268A6574006EBF2F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				373BE180268A64AE006EBF2F /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		373BE190268A658B006EBF2F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3731684F269051D700C70C78 /* VueTacheListeModel.swift */,
+				3731685126905B8000C70C78 /* ListeTacheUserDefaultModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		37E78877269A337600FD2F26 /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				37E78878269A33B900FD2F26 /* Ressources.swift */,
+			);
+			path = Ressources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -110,6 +158,7 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
 			);
 			mainGroup = 373BE172268A64AD006EBF2F;
 			productRefGroup = 373BE17C268A64AE006EBF2F /* Products */;
@@ -127,6 +176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				373BE186268A64AF006EBF2F /* Preview Assets.xcassets in Resources */,
+				37E7887C269A3B8400FD2F26 /* Localizable.strings in Resources */,
 				373BE183268A64AF006EBF2F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,12 +188,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3731684E26904EFB00C70C78 /* Tache.swift in Sources */,
 				373BE181268A64AE006EBF2F /* ContentView.swift in Sources */,
+				37316850269051D700C70C78 /* VueTacheListeModel.swift in Sources */,
+				37E78879269A33B900FD2F26 /* Ressources.swift in Sources */,
 				373BE17F268A64AE006EBF2F /* listeDeTachesApp.swift in Sources */,
+				3731685226905B8000C70C78 /* ListeTacheUserDefaultModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		37E7887E269A3B8400FD2F26 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				37E7887D269A3B8400FD2F26 /* en */,
+				37E7887F269A3B9200FD2F26 /* fr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		373BE188268A64AF006EBF2F /* Debug */ = {

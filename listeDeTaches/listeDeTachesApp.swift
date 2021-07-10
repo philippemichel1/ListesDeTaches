@@ -11,7 +11,7 @@ import SwiftUI
 struct listeDeTachesApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(vuListeModel: ListeTacheUserDefaultModel())
         }
     }
 }
