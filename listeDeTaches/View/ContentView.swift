@@ -23,6 +23,20 @@ struct ContentView: View {
                         })
                     }
                 }
+                Section {
+                    VStack(alignment:.center) {
+                        Button(action: {
+                            
+                        }, label: {
+                            Text("button")
+                        })
+                        .background(Color.red)
+                        .foregroundColor(.white)
+                        .cornerRadius(5)
+                        
+                        
+                    }
+                }
                 Section(header: Text("section")) {
                     List {
                         ForEach(vuListeModel.items) { tache in

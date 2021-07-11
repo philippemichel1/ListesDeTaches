@@ -8,3 +8,4 @@
 "title" = "List of my tasks";
 "textField" = "Add a task";
 "section" = "My task to do";
+"button" = "Delete all tasks";

@@ -8,3 +8,4 @@
 "title" = "Liste de mes tâches";
 "textField" = "Ajouter une tâche";
 "section" = "Mes tâches";
+"button" = "Supprimer toutes les tâches";
