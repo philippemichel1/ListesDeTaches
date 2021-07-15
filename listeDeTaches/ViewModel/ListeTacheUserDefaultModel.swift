@@ -51,5 +51,10 @@ class ListeTacheUserDefaultModel: ObservableObject {
         synchronisation()
     }
     
+    //supprimer toutes les taches
+    func tacheToutSupprimer() {
+        items.removeAll()
+        synchronisation()
+    }
     
 }

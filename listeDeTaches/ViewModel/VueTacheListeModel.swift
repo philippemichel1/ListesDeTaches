@@ -33,7 +33,11 @@ class VueTacheListeModel: ObservableObject {
     // supprime une tache de la liste
     func supprimerTache(index: IndexSet) {
         items.remove(atOffsets: index)
-        sync()
+        
     }
     
+    //supprimer toutes les taches
+    func tacheToutSupprimer() {
+        items.removeAll()
+    }
 }

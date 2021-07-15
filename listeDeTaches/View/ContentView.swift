@@ -23,16 +23,20 @@ struct ContentView: View {
                         })
                     }
                 }
+                
                 Section {
-                    VStack(alignment:.center) {
+                    HStack(alignment:.center) {
                         Button(action: {
+                            vuListeModel.tacheToutSupprimer()
                             
                         }, label: {
                             Text("button")
                         })
+                        .padding(2)
                         .background(Color.red)
                         .foregroundColor(.white)
                         .cornerRadius(5)
+                        
                         
                         
                     }
