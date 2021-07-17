@@ -23,22 +23,21 @@ struct ContentView: View {
                         })
                     }
                 }
-                
-                Section {
-                    HStack(alignment:.center) {
-                        Button(action: {
-                            vuListeModel.tacheToutSupprimer()
-                            
-                        }, label: {
-                            Text("button")
-                        })
-                        .padding(2)
-                        .background(Color.red)
-                        .foregroundColor(.white)
-                        .cornerRadius(5)
-                        
-                        
-                        
+                // affiche le bouton la liste de tâche contient au moins un élément.
+                if vuListeModel.items.count > 0 {
+                    Section {
+                        HStack(alignment:.center) {
+                            Button(action: {
+                                vuListeModel.tacheToutSupprimer()
+                                
+                            }, label: {
+                                Text("button")
+                            })
+                            .padding(3)
+                            .background(Color.red)
+                            .foregroundColor(.white)
+                            .cornerRadius(5)
+                        }
                     }
                 }
                 Section(header: Text("section")) {
@@ -54,6 +53,7 @@ struct ContentView: View {
                                 })
                             }
                         }
+                        
                         .onDelete(perform: { indexSet in
                             vuListeModel.supprimerTache(index: indexSet)
                         })
