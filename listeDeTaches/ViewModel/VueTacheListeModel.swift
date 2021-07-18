@@ -17,7 +17,6 @@ class VueTacheListeModel: ObservableObject {
     }
     
     // mise de la tache de vrai à faux
-
     // mise à jour de la tache
     func miseAjourTache(tache: Tache) {
         guard let index = items.firstIndex(where: {$0.id == tache.id}) else { return }
