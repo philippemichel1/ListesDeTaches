@@ -8,8 +8,9 @@
 import SwiftUI
 class VueTacheListeModel: ObservableObject {
     @Published var items:[Tache] = []
-    var mesTaches:[String] =  ["Ménage", "Courses", "Enfants école", "Devoirs", "Aller boire un verre en terrasse", "Aller au magasin de bricolage acheter du platre"]
+    var mesTaches:[String] =  ["Ménage", "Courses", "Classer les papier", "Faire les Devoirs", "Aller boire un pot en terrasse", "aller à la piscine"]
     
+    //initialisation des proprietes
     init() {
         items = mesTaches.map({ string in
             Tache(nom: string, statut: false)
