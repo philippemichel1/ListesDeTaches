@@ -38,6 +38,7 @@ struct ContentView: View {
                             .foregroundColor(.white)
                             .cornerRadius(5)
                         }
+                        
                     }
                 }
                 Section(header: Text("section")) {
@@ -61,8 +62,14 @@ struct ContentView: View {
                 }
             }
             .navigationTitle(Text("title"))
+            //mouvement action 
+            .onTapGesture(perform: {
+                // rentre le clavier si on touche le tape sur le formulaire
+                UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+            })
         }
     }
+    
     
     // changement du logo sur changement de statut de la tâche
     func changementStatutTacheImage(statutDeTache: Bool) -> some View {
@@ -77,3 +84,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView( vuListeModel: ListeTacheUserDefaultModel())
     }
 }
+
