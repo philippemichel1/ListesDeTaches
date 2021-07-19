@@ -18,6 +18,8 @@ struct ContentView: View {
                     HStack {
                         TextField("textField", text: $text)
                         Button(action: {
+                                // rentre le clavier 
+                                UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
                                 vuListeModel.ajouterTache(string: text)                     }, label: {
                                     Image(systemName: Ressouces.images.ajouter.rawValue)
                         })
@@ -63,10 +65,11 @@ struct ContentView: View {
             }
             .navigationTitle(Text("title"))
             //mouvement action 
-            .onTapGesture(perform: {
+            /*.onTapGesture(perform: {
                 // rentre le clavier si on touche le tape sur le formulaire
                 UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-            })
+                
+            })*/
         }
     }
     
