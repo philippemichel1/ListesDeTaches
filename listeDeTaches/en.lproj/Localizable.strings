@@ -9,3 +9,4 @@
 "textField" = "Add a task";
 "section" = "My task to do";
 "button" = "Delete all tasks";
+"alert" = "the task cannot be empty";

@@ -9,3 +9,4 @@
 "textField" = "Ajouter une tâche";
 "section" = "Mes tâches";
 "button" = "Supprimer toutes les tâches";
+"alert" = "La tâche ne peut être vide";

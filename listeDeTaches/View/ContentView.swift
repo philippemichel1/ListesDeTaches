@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     @State var text: String = ""
+    @State var montrerAlerte:Bool = false
+    
     @ObservedObject var vuListeModel: ListeTacheUserDefaultModel
 
     var body: some View {
@@ -20,9 +22,13 @@ struct ContentView: View {
                         Button(action: {
                                 // rentre le clavier 
                                 UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-                                vuListeModel.ajouterTache(string: text)                     }, label: {
+                                verifSaisie()
+                        }, label: {
                                     Image(systemName: Ressouces.images.ajouter.rawValue)
                         })
+                            .alert(isPresented: $montrerAlerte, content: {
+                                Alert(title: Text("alert"))
+                            })
                     }
                 }
                 // affiche le bouton la liste de tâche contient au moins un élément.
@@ -64,12 +70,6 @@ struct ContentView: View {
                 }
             }
             .navigationTitle(Text("title"))
-            //mouvement action 
-            /*.onTapGesture(perform: {
-                // rentre le clavier si on touche le tape sur le formulaire
-                UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-                
-            })*/
         }
     }
     
@@ -79,6 +79,18 @@ struct ContentView: View {
         let systemeName = statutDeTache ? Ressouces.images.tacheEffectuer.rawValue : Ressouces.images.tacheNonEffectuer.rawValue
         let color: Color = statutDeTache ? .green : .red
         return Image(systemName: systemeName).foregroundColor(color)
+    }
+    
+    //verification de la saisie
+    func verifSaisie() {
+        if text == "" {
+            montrerAlerte = true
+            
+        } else {
+            vuListeModel.ajouterTache(string: text)
+            montrerAlerte = false
+            text = ""
+        }
     }
 }
 
