@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State var text: String = ""
     @State var montrerAlerte:Bool = false
+    @FocusState var focusTache:Bool
     
     @ObservedObject var vuListeModel: ListeTacheUserDefaultModel
 
@@ -19,6 +20,11 @@ struct ContentView: View {
                 Section {
                     HStack {
                         TextField("textField", text: $text)
+                            .focused($focusTache)
+                            .onSubmit {
+                                UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+                                verifSaisie()
+                            }
                         Button(action: {
                                 // rentre le clavier 
                                 UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
